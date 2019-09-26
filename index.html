@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="post">
+    <input type="number" id="num1">
+    <input type="number" id="num2">
+    <br>
+    <button type="button" onclick="Calc('+')">Cộng (+)</button>
+    <button type="button" onclick="Calc('-')">Trừ (-)</button>
+    <button type="button" onclick="Calc('*')">Nhân (*)</button>
+    <button type="button" onclick="Calc('/')">Chia (/)</button>
+</form>
+
+<p id="result"></p>
+<script>
+    let num1 = document.getElementById("num1");
+    let num2 = document.getElementById("num2");
+    let result = document.getElementById("result");
+    function Calc(operator) {
+        switch (operator) {
+            case '+':
+                result.innerHTML = "Result: " + (Number(num1.value) + Number(num2.value));
+                break;
+            case '-':
+                result.innerHTML = "Result: " + (Number(num1.value) - Number(num2.value));
+                break;
+            case '*':
+                result.innerHTML = "Result: " + (Number(num1.value) * Number(num2.value));
+                break;
+            case '/':
+                result.innerHTML = "Result: " + (Number(num1.value) / Number(num2.value));
+                break;
+        }
+    }
+</script>
+</body>
+</html>
