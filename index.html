@@ -21,19 +21,16 @@
     let num2 = document.getElementById("num2");
     let result = document.getElementById("result");
     function Calc(operator) {
-        switch (operator) {
-            case '+':
-                result.innerHTML = "Kết quả cộng: " + (Number(num1.value) + Number(num2.value));
-                break;
-            case '-':
-                result.innerHTML = "Kết quả trừ: " + (Number(num1.value) - Number(num2.value));
-                break;
-            case '*':
-                result.innerHTML = "Kết quả nhân: " + (Number(num1.value) * Number(num2.value));
-                break;
-            case '/':
-                result.innerHTML = "Kết quả chia: " + (Number(num1.value) / Number(num2.value));
-                break;
+        if(operator == '+') {
+            result.innerHTML = "Kết quả cộng: " + (Number(num1.value) + Number(num2.value));
+        } else if(operator == '-') {
+            result.innerHTML = "Kết quả cộng: " + (Number(num1.value) - Number(num2.value));
+        } else if(operator == '*') {
+            result.innerHTML = "Kết quả cộng: " + (Number(num1.value) * Number(num2.value));
+        } else if(operator == '/') {
+            result.innerHTML = "Kết quả cộng: " + (Number(num1.value) / Number(num2.value));
+        } else {
+            result.innerHTML = "Không có phép tính này";
         }
     }
 </script>
